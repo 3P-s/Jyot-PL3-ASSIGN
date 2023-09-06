@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCE StackOverFlow</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title" style="margin-top: 5rem;">WCE OVERFLOW</h1>
+    </header>
+
+    <main>
+        <div class="faq-heading">
+            <section class="faq-container">
+                <div class="faq-one">
+                    <h4>Question content goes here...</h4>
+                    <div>
+                        <label for="answer">Your Answer:</label>
+                        <textarea id="answer" name="answer" rows="4" cols="50"></textarea>
+                        <button class="btn">Submit Answer</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <section>
+            <h2>FAQs</h2>
+            <ul>
+                <li>What is this website about?</li>
+                <li>How can I ask a question?</li>
+                <li>How can I answer a question?</li>
+            </ul>
+        </section>
+        <button class="btn" onclick="window.location.href='home.html'">ASK A QUESTION</button>
+    </footer>
+
+    <script>
+        document.getElementById("submit-answer").addEventListener("click", function () {
+            const answer = document.getElementById("answer").value;
+
+            alert("Answer submitted: " + answer);
+        });
+    </script>
+</body>
+</html>
