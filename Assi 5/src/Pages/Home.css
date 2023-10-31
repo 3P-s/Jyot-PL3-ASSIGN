@@ -56,3 +56,40 @@ body {
     color: #333;
     margin: 10px;
   }
+
+  .weather-icon {
+    width: 64px;
+    height: 64px;
+    margin: 10px;
+  }
+  
+  /* Style the weather details container */
+  .weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Center the search container on the page */
+  .search {
+    text-align: center;
+    display: inline-block;
+  }
+  
+  /* Style the weather information */
+  h2, p {
+    color: #333;
+    margin: 10px;
+  }
+  
+  /* Add a style for the weather information container */
+  .weather-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    margin: 10px;
+  }
