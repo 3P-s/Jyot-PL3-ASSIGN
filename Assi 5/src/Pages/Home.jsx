@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Home.css'
 
 const Home = () => {
   const [searchedLocation, setSearchedLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
+  const [err, Iserr] = useState(false)
 
   const handleSearch = async () => {
     const options = {
@@ -25,33 +27,21 @@ const Home = () => {
   };
   return (
     <div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
+      <div className='search'>
         <h1>Weather Search</h1>
-        <input
-          type="text"
-          placeholder="Enter a location (e.g., New York)"
-          value={searchedLocation}
-          onChange={(e) => setSearchedLocation(e.target.value)}
-          style={{
-            padding: '8px',
-            width: '300px',
-            margin: '10px',
-          }}
-        />
+        <input type="text" placeholder="Enter a location (e.g., New York)" value={searchedLocation} onChange={(e) => setSearchedLocation(e.target.value)} style={{ padding: '8px', width: '300px', margin: '10px', }} />
         <button onClick={handleSearch}>Search</button>
       </div>
-      
       {weatherData && (
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
           <h2>Weather for {weatherData.location.name}</h2>
           <p>Temperature: {weatherData.current.temp_c}°C</p>
           <p>Condition: {weatherData.current.condition.text}</p>
+        </div>
+      )}
+      {err && (
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <h2>Error Occured</h2>
         </div>
       )}
     </div>
