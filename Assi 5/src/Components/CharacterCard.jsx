@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
-import CharacterDetailsModal from './CharacterDetailsModal';
-
-const CharacterCard = ({ character }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  return (
-    <div className="character-card" onClick={() => setIsModalOpen(true)}>
-      <img src={`https://picsum.photos/200/300?random=${character.name}`} alt="Character" />
-      <h3>{character.name}</h3>
-      <div className="character-details">
-        <p>Species: {character.species}</p>
-        {/* Add more details as needed */}
+  const CharacterCard = ({ character }) => {
+    return (
+      <div className="character-card">
+        <img src={character.image || "https://cdn2.vectorstock.com/i/1000x1000/11/41/male-profile-picture-vector-2051141.jpg"} alt="Character" />
+        <h3>{character.name}</h3>
+        <div className="character-details">
+          <p>Species: {character.species}</p>
+          <p>Gender: {character.gender} </p>
+          <p>DOB: {character.dateOfBirth} </p>
+        </div>
       </div>
-      {isModalOpen && <CharacterDetailsModal character={character} />}
-    </div>
-  );
-};
+    );
+  };
 
-export default CharacterCard;
+  export default CharacterCard;

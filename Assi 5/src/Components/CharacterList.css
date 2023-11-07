@@ -3,10 +3,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  
-  /* src/components/CharacterCard.css */
+
   .character-card {
-    background: gray;
+    border: 1px solid white;
+    background: rgb(0, 0, 0);
     border-radius: 8px;
     margin: 10px;
     padding: 10px;
@@ -15,17 +15,21 @@
     transition: background-color 0.3s;
     cursor: pointer;
   }
-  
+  .character-card h3 {
+    border: 1px solid white;
+  }
   .character-card:hover {
-    background: #2196F3; /* Example hover color */
+    border: 1px solid #646cffaa;
+    filter: drop-shadow(0 0 1em #646cffaa);
+    color: black;
+    background: rgb(33, 215, 243); 
+    
   }
   
   .character-card img {
     width: 100%;
     height: auto;
   }
-  
-  /* src/components/CharacterDetailsModal.css */
   .character-details-modal {
     display: flex;
     flex-direction: column;

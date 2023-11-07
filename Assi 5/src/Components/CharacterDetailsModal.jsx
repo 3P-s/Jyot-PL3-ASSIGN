@@ -9,9 +9,6 @@ const CharacterDetailsModal = ({ character }) => {
       {isOpen && (
         <div className="modal-content">
           <h2>{character.name}</h2>
-          <p>Height: {character.height} m</p>
-          <p>Mass: {character.mass} kg</p>
-          {/* Add more details */}
           <button onClick={() => setIsOpen(false)}>Close</button>
         </div>
       )}

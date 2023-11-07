@@ -1,35 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CharacterCard from './CharacterCard';
-import './CharacterList.css'
+import './CharacterList.css';
+
 const CharacterList = () => {
   const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://swapi.dev/api/people');
-        setCharacters(response.data.results);
-        setLoading(false);
-        console.log(response.data.results);
+        const response = await axios.get('https://hp-api.onrender.com/api/characters');
+        console.log(response.data);
+        setCharacters(response.data);
       } catch (err) {
-        setError(err);
-        setLoading(false);
+        console.log(err);
       }
     };
 
     fetchData();
   }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
 
   return (
     <div className="character-list">
