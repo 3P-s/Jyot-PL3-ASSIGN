@@ -1,0 +1,43 @@
+.character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* src/components/CharacterCard.css */
+  .character-card {
+    background: gray;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .character-card:hover {
+    background: #2196F3; /* Example hover color */
+  }
+  
+  .character-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* src/components/CharacterDetailsModal.css */
+  .character-details-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
