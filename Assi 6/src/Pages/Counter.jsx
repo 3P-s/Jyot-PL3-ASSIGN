@@ -5,6 +5,9 @@ const Counter = () => {
   const handleclick = () => {
     setCount(count + 1)
   }
+  const handleclick1 = () => {
+    setCount(count - 1)
+  }
   const handleReset = () => setCount(0)
   return (
     <>
@@ -12,7 +15,10 @@ const Counter = () => {
         <div style={{ fontWeight: '800' }}>Counter</div>
         <div style={{ margin: '1rem' }}>{count}</div>
         <div style={{ margin: '1rem' }}>
-          <button onClick={handleclick}>Update the Count</button>
+          <button onClick={handleclick}>Increase the Count</button>
+        </div>
+        <div style={{ margin: '1rem' }}>
+          <button onClick={handleclick1}>Decrese the Count</button>
         </div>
         {count!=0 && (
           <button onClick={handleReset}>Reset</button>

@@ -44,14 +44,10 @@ body {
   button:hover {
     background-color: #0056b3;
   }
-  
-  /* Center the search container on the page */
   .search {
     text-align: center;
     display: inline-block;
   }
-  
-  /* Style the weather information */
   h2, p {
     color: #333;
     margin: 10px;
@@ -63,7 +59,6 @@ body {
     margin: 10px;
   }
   
-  /* Style the weather details container */
   .weather-details {
     display: flex;
     flex-direction: column;
@@ -76,13 +71,11 @@ body {
     display: inline-block;
   }
   
-  /* Style the weather information */
   h2, p {
     color: #333;
     margin: 10px;
   }
   
-  /* Add a style for the weather information container */
   .weather-info {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
