@@ -22,9 +22,6 @@ router.post('/insertMany', async (req, res) => {
     const groupByConditionalStatements = await Game.aggregate([
       { $group: { _id: { $cond: [{ $gte: ["$field", 5] }, "Greater than or equal to 5", "Less than 5"] }, count: { $sum: 1 } } }
     ]);
-
-
-    // Group by a Nested Field in MongoDB
     const groupByNestedField = await Game.aggregate([
       { $group: { _id: "$nestedField.fieldName", count: { $sum: 1 } } }
     ]);
