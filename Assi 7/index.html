@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Data</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
 </head>
 <body>
-    
+
+<table>
+  <thead>
+    <tr>
+      <th>Game Name</th>
+      <th>Publisher</th>
+      <th>Release Date</th>
+      <th>Rating</th>
+      <th>Average Score</th>
+    </tr>
+  </thead>
+  <tbody id="gameTableBody">
+  </tbody>
+</table>
+
+<script>
+  fetch('http://localhost:3000/api/games')
+    .then(response => response.json())
+    .then(data => {
+      const tableBody = document.getElementById('gameTableBody');
+      data.forEach(game => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${game.gameName}</td>
+          <td>${game.publisher}</td>
+          <td>${game.releaseDate}</td>
+          <td>${game.rating}</td>
+          <td>${game.averageScore}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    })
+    .catch(error => console.error('Error fetching data:', error));
+</script>
+
 </body>
 </html>
