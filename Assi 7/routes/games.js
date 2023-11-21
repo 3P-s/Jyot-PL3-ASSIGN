@@ -40,7 +40,17 @@ router.get('/:id', (req, res) => {
     }
   });
 });
-
+router.post('/insertMany', async (req, res) => {
+  const gamesData = req.body; 
+  try {
+    const insertedGames = await Game.insertMany(gamesData);
+    res.status(201).json(insertedGames);
+    console.log('Data inserted successfully');
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 router.put('/:id', (req, res) => {
   Game.findByIdAndUpdate(
