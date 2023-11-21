@@ -1,0 +1,35 @@
+[{
+  "gameName": "Clash Royal",
+  "publisher": "Supercell",
+  "releaseDate": "16-04-2010",
+  "rating": 9,
+  "averageScore": 92
+},
+{
+  "gameName": "God of War 3",
+  "publisher": "Sony",
+  "releaseDate": "14-14-2008",
+  "rating": 10,
+  "averageScore": 99
+},
+{
+  "gameName": "GTA V",
+  "publisher": "Rockstar",
+  "releaseDate": "5-12-2010",
+  "rating": 10,
+  "averageScore": 98
+},
+{
+  "gameName": "SpiderMan",
+  "publisher": "Isomaniac",
+  "releaseDate": "23-03-2019",
+  "rating": 8,
+  "averageScore": 95
+},
+{
+  "gameName": "Call of Duty 3",
+  "publisher": "Activision",
+  "releaseDate": "02-06-2011",
+  "rating": 7,
+  "averageScore": 69
+}]

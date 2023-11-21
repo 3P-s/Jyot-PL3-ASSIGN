@@ -3,9 +3,9 @@ const router = express.Router();
 const Game = require('../model/game');
 
 router.post('/', async (req, res) => {
-  const { name, genre, rating } = req.body;
+  const { gameName, publisher, releaseDate ,rating, averageScore } = req.body;
   try {
-    const newGame = new Game({ name, genre, rating, achievements: [] });
+    const newGame = new Game({ gameName, publisher, releaseDate ,rating, averageScore});
     const savedGame = await newGame.save();
     res.status(201).json(savedGame);
     console.log('Data saved successfully');

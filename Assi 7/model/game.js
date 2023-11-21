@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 const gameSchema = new mongoose.Schema({
-  name: String,
-  genre: String,
+  gameName: String,
+  publisher: String,
+  releaseDate: String,
   rating: Number,
-  achievements: [String],
+  averageScore: Number,
 });
 
 const Game = mongoose.model('Game', gameSchema);
